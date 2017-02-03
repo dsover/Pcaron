@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   $.ajax({
-    url: "http://snstrfreedom.tumblr.com/api/read/xml?num=10&&type=text",
+    url: "https://paulcaronnews.tumblr.com/api/read/xml?num=10&&type=text",
     dataType: 'jsonp'
   }).done(function(data) {
     let posts = data.posts,
