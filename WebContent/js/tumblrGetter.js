@@ -1,12 +1,12 @@
 $( document ).ready(function() {
-
+  let siteUrl = 'https://paulcaronnews.tumblr.com';
   $.ajax({
-    url: "https://paulcaronnews.tumblr.com/api/read/xml?num=10&&type=text",
+    url: `${siteUrl}/api/read/xml?num=10&&type=text`,
     dataType: 'jsonp'
   }).done(function(data) {
     let posts = data.posts,
     blogsHtml = `<div class="row pull-right">
-                  <a href="http://snstrfreedom.tumblr.com/rss" target="_blank">RSS Feed <img src="./images/rss.png" width="48"></a>
+                  <a href="${siteUrl}/rss" target="_blank">RSS Feed <img src="./images/rss.png" width="48"></a>
                   </div>
                   <div style="display: inline-block;">`;
     for(let x in posts){
@@ -22,7 +22,7 @@ $( document ).ready(function() {
     }
     blogsHtml += `</div>
       <div class="row pull-right">
-        <a href="http://snstrfreedom.tumblr.com/archive" target="_blank">For more see the archives ... <img src="./images/tumblr.png" width="23"></a>
+        <a href="${siteUrl}/archive" target="_blank">For more see the archives ... <img src="./images/tumblr.png" width="23"></a>
       </div>`
     $('#blogDiv').html(blogsHtml)
   });
