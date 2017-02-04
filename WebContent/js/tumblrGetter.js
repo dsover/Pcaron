@@ -25,8 +25,6 @@ $( document ).ready(function() {
         <a href="http://snstrfreedom.tumblr.com/archive" target="_blank">For more see the archives ... <img src="./images/tumblr.png" width="23"></a>
       </div>`
     $('#blogDiv').html(blogsHtml)
-    // blogDiv
-    console.log(data)
   });
 
 
