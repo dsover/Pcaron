@@ -1,4 +1,34 @@
 $( document ).ready(function() {
+  loadGallery();
+  if(window.location.hash.split('#')[1]){
+    routeToLocation();
+  }else{
+    updateUrl('#bio');
+  }
+});
+
+function routeToLocation(){
+  let location = window.location.hash.split('#')[1];
+      subLocation = window.location.hash.split('#')[2];
+  if (subLocation) {
+    switch (location) {
+      case 'work':
+        clk(location);
+        workContentSwitcher(subLocation)
+        break;
+      case 'gallery':
+        clk(location);
+        galleryContentSwitcher(subLocation)
+        break;
+      default:
+        clk('bio');
+    }
+  } else {
+    clk(location);
+  }
+}
+
+function loadGallery(){
   var data = [
     {
       image:'https://lh3.googleusercontent.com/ph7KJ-3Yur1wst8LhTgRJFKonnebbOe-fxu95HBro4JqbuH_UAL6LKpm5euWtruplxMDZsSxPfef0CWTjnVWk9OZqIRPs9tpaPF1zQ4_CpUlfWFQzYHgKS7B8LfxE6iLV0gHxNx4o__daOZojQRv4RrNkd-LVA3X0s-Ayz6oHsMb8ta8OhI-T50k8kb9Tx4LtAKkzx_WArNgbhoF1BQ9qPo6zd6mym1AV5yHkUFXe36Su6d9cS7vbLYueo_tTkoZ5qpM5KHakVr_pgpRN0bF-m-ulkq_0H_LoUE_IpXw-9wVaoKHKbZBaL0M-QML4AFMY1MYj90OGylefSCYwgUH2sGVSWbqm66ooN18tpKX2V8jp5IskvSv9KE3uUMJt8SVJDa6zmjzL_JGy7T6doafTeu6aXOquPG34Bk2Bv1qTcUgdoAJnLPTfMzR070YbZK1iYqxbuOhwX6eYHi2P5o4p_I5L9H8mJaKpPxLmgJP8rNzSus_RaTR-ZBTujJpG3HjbZC2bWa9M_arsR0402NkVg9XqodqdrRnuU4AMN-B1eaM1IOXaMf_08QkkDHonFNTfE8kX2hIdFM8baj7mLj98-S32qPSozW2L37aEflK_o-ydR7HAjZq=w640-h480-no',
@@ -142,8 +172,7 @@ $( document ).ready(function() {
 
   });
   Galleria.run('.galleria',{dataSource: data});
-
-});
+}
 
 
 function clk(id){
@@ -156,6 +185,7 @@ function clk(id){
 		});
 	});
 	$('#content').fadeIn(350);
+  updateUrl(`#${id}`);
 }
 function workContentSwitcher(id){
 	$('#workContent').fadeOut(250,function(){
@@ -167,6 +197,7 @@ function workContentSwitcher(id){
 		});
 	});
 	$('#workContent').fadeIn(350);
+  updateUrl(`#work#${id}`);
 }
 function galleryContentSwitcher(id){
 	$('#workContent').fadeOut(250,function(){
@@ -178,6 +209,7 @@ function galleryContentSwitcher(id){
 		});
 	});
 	$('#workContent').fadeIn(350);
+  updateUrl(`#gallery#${id}`);
 }
 function switcher(sectionDiv,sectionSelector,section,id){
 	if(!(id == section)){
@@ -190,4 +222,14 @@ function switcher(sectionDiv,sectionSelector,section,id){
 		$("#"+sectionDiv).removeClass("inactiveDiv");
 		$("#"+sectionDiv).addClass("activeDiv");
 	}
+}
+
+function updateUrl(newHash){
+  if(history.pushState) {
+      history.pushState(null, null, newHash);
+  }
+  else {
+      location.hash = newHash;
+  }
+
 }
