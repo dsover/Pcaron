@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   let siteUrl = 'https://paulcaronnews.tumblr.com';
   $.ajax({
-    url: `${siteUrl}/api/read/xml?num=10&&type=text`,
+    url: `${siteUrl}/api/read/json?num=10&&type=text`,
     dataType: 'jsonp'
   }).done(function(data) {
     let posts = data.posts,
