@@ -1,370 +1,455 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<meta charset="UTF-8">
-  	<script src="./js/jquery-2.1.1.min.js"></script>
-  	<script src="./js/bootstrap.min.js"></script>
-  	<script src="./js/script.js"></script>
-    <script src="./js/tumblrGetter.js"></script>
-  	<script src="./js/galleria-1.4.2/galleria-1.4.2.min.js"></script>
-  	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
-  	<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css" />
-  	<!-- <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css" />
+
+<head>
+	<meta charset="UTF-8">
+	<script src="./js/jquery-2.1.1.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="./js/tumblrGetter.js"></script>
+	<script src="./js/galleria-1.4.2/galleria-1.4.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css" />
   	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css" />
   	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.min.css" /> -->
-  	<link rel="stylesheet" type="text/css" href="./css/styles.css" />
-  	<link rel="shortcut icon" type="image/png" href="./images/tvIcon.png" />
-  	<title>Paul Caron professional news journalist</title>
-  	<meta name="description" content="Paul H. Caron is a career newsman who is passionate about all facets of the news industry.  He has been
+	<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+	<link rel="shortcut icon" type="image/png" href="./images/tvIcon.png" />
+	<title>Paul Caron professional news journalist</title>
+	<meta name="description" content="Paul H. Caron is a career newsman who is passionate about all facets of the news industry.  He has been
   										a producer, writer, editor, and manager for CNN for 28 years.  Paul Caron also has experience in
   										broadcast journalism both in news and in sports. From national news to politics to weather, Paul has
   										done it all.">
-  	<script>
-  	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  	  ga('create', 'UA-56811963-1', 'auto');
-  	  ga('send', 'pageview');
-  	</script>
-  </head>
-  <body>
-  	<div class="row">
-  		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" position="fixed">
-        <a class="navbar-brand pull-right" href="https://paulcaronnews.tumblr.com" target="_blank"><img src="./images/tumblr.png" width="23px"></a>
-     		<a class="navbar-brand pull-right" href="https://twitter.com/PCBS46" target="_blank"><img src="./images/tweet.jpeg" width="23px"></a>
-      	<a class="navbar-brand pull-right" href="https://www.linkedin.com/in/paulcaronnews" target="_blank"><img src="./images/in.jpg" width="23px"></a>
-      	<a class="navbar-brand pull-right" href="javascript:clk('bio')">Paul Caron</a>
-        <div class="container">
-        	<div class="navbar-header">
-        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-          		<span class="sr-only">Toggle navigation</span>
-          		<span class="icon-bar"></span>
-          		<span class="icon-bar"></span>
-          		<span class="icon-bar"></span>
-        		</button>
-        		<span class="visible-xs navbar-brand">Menu</span>
-        	</div>
-        	<div class="navbar-collapse collapse sidebar-navbar-collapse">
-        		<ul class="nav navbar-nav">
-          		<li id="bioli" class="active"><a href="javascript:clk('bio')">Bio&nbsp; <span class="glyphicon glyphicon-star pull-right"></a></li>
-              <li id="blogli"><a href="javascript:clk('blog')">Blog&nbsp; <span class="glyphicon glyphicon-book pull-right"></a></li>
-              <li id="workli"><a href="javascript:clk('work')">Work&nbsp; <span class="glyphicon glyphicon-globe pull-right"></span></a></li>
-              <li id="galleryli"><a href="javascript:clk('gallery')">Gallery&nbsp; <span class="glyphicon glyphicon-film pull-right"></span></a></li>
-              <li id="resumeli"><a href="javascript:clk('resume')">Resum&#233;&nbsp;<span class="glyphicon glyphicon-file pull-right"></span></a></li>
-           	  <li id="linksli"><a href="javascript:clk('links')">Publications&nbsp; <span class="glyphicon glyphicon-link pull-right"></span></a></li>
-              <li id="contactli"><a href="javascript:clk('contact')">Contact Me&nbsp; <span class="glyphicon glyphicon-envelope pull-right"></span></a></li>
-        		</ul>
-        	</div>
-      	</div>
-  	  </div>
-  	</div>
-  	<div class="row">
-  		<img alt="home" src="./images/home.png" width="100%">
-  	</div>
-  	<div class="row">
-  	  <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1" id="leftBar">
-  	  </div>
-  	  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 well">
-  			<div id="content" >
-  	    	<div id="bioDiv" class="activeDiv">
-  	    		<div class="row">
-  		    		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-  			    		<span class="bodyText">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul Caron is the Managing Editor in Atlanta for CBS-46.  He is also the former
-                    CNN National Desk Manager, producer, and correspondent. He is a newsman who is dedicated to a long career
-                    in the news industry. He grew up in the suburbs of Detroit, Michigan. He knew from a young age that his
-                    path was in journalism. The novel and movie <i>All the President&#39;s Men</i> first showed Paul the depth
-                    and power behind truth revealed by great journalism, and that inspiration lit the spark. Paul believes
-                    that the news is a watchdog for the people, a service to be provided with integrity, and these convictions
-                    helped shape his career so far.</p>
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-56811963-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
 
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul is one of four brothers, and he had a happy childhood full of sports, most
-                    notably hockey. His love of all sports, especially Detroit teams, persists to this day. He landed his first
-                    glamorous job in media delivering the Detroit Free Press at the ripe age of 12. In 1980, he graduated from
-                    Lakeview High School and went on to double major in Journalism and Broadcasting at Central Michigan
-                     University. At Central Michigan, Paul was active with both the campus television and radio stations. He
-                    served as Sports Director at WMHW.  He was also the host of a weekly TV music/dance show. After graduation, he
-                    worked at WJR Radio in Detroit before, at only 23 years old, beginning a 28 year career with CNN.</p>
+<body>
+	<div class="row">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" position="fixed">
+			<a class="navbar-brand pull-right" href="https://paulcaronnews.tumblr.com" target="_blank">
+				<img src="./images/tumblr.png" width="23px">
+			</a>
+			<a class="navbar-brand pull-right" href="https://twitter.com/PCBS46" target="_blank">
+				<img src="./images/tweet.jpeg" width="23px">
+			</a>
+			<a class="navbar-brand pull-right" href="https://www.linkedin.com/in/paulcaronnews" target="_blank">
+				<img src="./images/in.jpg" width="23px">
+			</a>
+			<a class="navbar-brand pull-right" href="javascript:clk('bio')">Paul Caron</a>
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="visible-xs navbar-brand">Menu</span>
+				</div>
+				<div class="navbar-collapse collapse sidebar-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li id="bioli" class="active">
+							<a href="javascript:clk('bio')">Bio&nbsp;
+								<span class="glyphicon glyphicon-star pull-right">
+							</a>
+						</li>
+						<li id="blogli">
+							<a href="javascript:clk('blog')">Blog&nbsp;
+								<span class="glyphicon glyphicon-book pull-right">
+							</a>
+						</li>
+						<li id="workli">
+							<a href="javascript:clk('work')">Work&nbsp;
+								<span class="glyphicon glyphicon-globe pull-right"></span>
+							</a>
+						</li>
+						<li id="galleryli">
+							<a href="javascript:clk('gallery')">Gallery&nbsp;
+								<span class="glyphicon glyphicon-film pull-right"></span>
+							</a>
+						</li>
+						<li id="resumeli">
+							<a href="javascript:clk('resume')">Resum&#233;&nbsp;
+								<span class="glyphicon glyphicon-file pull-right"></span>
+							</a>
+						</li>
+						<li id="linksli">
+							<a href="javascript:clk('links')">Publications&nbsp;
+								<span class="glyphicon glyphicon-link pull-right"></span>
+							</a>
+						</li>
+						<li id="contactli">
+							<a href="javascript:clk('contact')">Contact Me&nbsp;
+								<span class="glyphicon glyphicon-envelope pull-right"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<img alt="home" src="./images/home.png" width="100%">
+	</div>
+	<div class="row">
+		<div class="col-xs-0 col-sm-0 col-md-1 col-lg-1" id="leftBar">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 well">
+			<div id="content">
+				<div id="bioDiv" class="activeDiv">
+					<div class="row">
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<span class="bodyText">
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul Caron is the Assistant News Director for WHNT News 19, the CBS affiliate in Huntsville,
+									AL. He was previously the Managing Editor in Atlanta for CBS-46. He is also the former CNN National Desk Manager,
+									producer, and correspondent. He is a newsman who is dedicated to a long career in the news industry. He grew up
+									in the suburbs of Detroit, Michigan. He knew from a young age that his path was in journalism. The novel and movie
+									All the President's Men first showed Paul the depth and power behind truth revealed by great journalism, and that
+									inspiration lit the spark. Paul believes that the news is a watchdog for the people, a service to be provided with
+									integrity, and these convictions helped shape his career so far.</p>
 
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul met his wife, Colleen in his first month at CNN Detroit. After they
-                    married, they moved from Detroit to London then to Miami before finally arriving in Atlanta. At CNN
-                    headquarters, Paul became a beloved manager on the National News Desk. They have two children, Sarah and
-                    Max, and one grandchild, Ashlynn.</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul is one of four brothers, and he had a happy childhood full of sports, most notably hockey.
+									His love of all sports, especially Detroit teams, persists to this day. He landed his first glamorous job in media
+									delivering the Detroit Free Press at the ripe age of 12. In 1980, he graduated from Lakeview High School and went
+									on to double major in Journalism and Broadcasting at Central Michigan University. At Central Michigan, Paul was
+									active with both the campus television and radio stations. He served as Sports Director at WMHW. He was also the
+									host of a weekly TV music/dance show. After graduation, he worked at WJR Radio in Detroit before, at only 23 years
+									old, beginning a 28 year career with CNN.</p>
 
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul brings energy and enthusiasm to the newsroom while drawing on his vast
-                    experience to support good, sound journalism.</p>
-  						  </span>
-  					  </div>
-  	   				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-  						  <img alt="test" class="img-responsive bodyImage" src="./images/bio.jpg"  ><span class="small">Paul Caron and his wife, Colleen</span>
-  					  </div>
-  				  </div>
-  	    	</div>
-          <div id="blogDiv" class="inactiveDiv">
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul met his wife, Colleen in his first month at CNN Detroit. After they married, they moved
+									from Detroit to London then to Miami before finally arriving in Atlanta. At CNN headquarters, Paul became a beloved
+									manager on the National News Desk. They have two children, Sarah and Max, and one grandchild, Ashlynn.</p>
 
-          </div>
-  			  <div id="workDiv" class="inactiveDiv">
-  		    	<div class="btns btn-group btn-group-justified" role="group" aria-label="Justified button group">
-  			      <a id="overviewbtn" href="javascript:workContentSwitcher('overview')" class="btn btn-default active" role="button">Overview</a>
-  			      <a id="atlantabtn" href="javascript:workContentSwitcher('atlanta')" class="btn btn-default" role="button">Atlanta</a>
-  			      <a id="miamibtn" href="javascript:workContentSwitcher('miami')" class="btn btn-default" role="button">Miami</a>
-  			      <a id="londonbtn" href="javascript:workContentSwitcher('london')" class="btn btn-default" role="button">London</a>
-  			      <a id="detroitbtn" href="javascript:workContentSwitcher('detroit')" class="btn btn-default" role="button">Detroit</a>
-    				</div>
-    				<div id="workContent">
-  		    		<div id="overviewDiv">
-  			    		<span class="bodyText">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul Caron has experience in all facets of the news industry. Beginning as a broadcaster and progressing
-                    to assignment manager, field producer, correspondent, control room producer, writer, editor, control room manager,
-                    political desk manager, director of coverage, national desk manager, and now managing editor. He even ran a camera for
-                    a while! He is active in social media, and works well melding 24 hour news cycle into digital coverage. Knowing all the
-                    cogs in the machine and what keeps them moving gives Paul the unique ability to see the big picture.</p>
-  			    		</span>
-  		    		</div>
-  		    		<div id="atlantaDiv" class="inactiveDiv">
-  		    			<div class="row">
-  			    			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-  					    		<span class="bodyText">
-  					    			<h1>Atlanta</h1>
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul was first brought to CNN headquarters in 1997 as the Weekend News Manager for the
-  											National Desk and as a Assignment Editor.  He managed and planned national weekend news coverage for
-  											CNN and CNN entities and oversaw affiliate weekend coverage.  During this time, he received a special Emmy for
-  											CNN’s coverage of the 9/11 attacks.</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul brings energy and enthusiasm to the newsroom while drawing on his vast experience to
+									support good, sound journalism.</p>
+							</span>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<img alt="test" class="img-responsive bodyImage" src="./images/bio.jpg">
+							<span class="small">Paul Caron and his wife, Colleen</span>
+						</div>
+					</div>
+				</div>
+				<div id="blogDiv" class="inactiveDiv">
 
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;In 2004, he was promoted to Regional Assignment Desk Manager for the Northeast and Southeast
-  											Regions while continuing in his role as Assignment Editor for the CNN National Desk.  In 2012, Paul was asked to take
-  											over as the CNN Political Desk Manager and he led his team to win Emmys for coverage of the Democratic Convention in Denver and
-  											for coverage of Election Night.</p>
+				</div>
+				<div id="workDiv" class="inactiveDiv">
+					<div class="btns btn-group btn-group-justified" role="group" aria-label="Justified button group">
+						<a id="overviewbtn" href="javascript:workContentSwitcher('overview')" class="btn btn-default active" role="button">Overview</a>
+						<a id="atlantabtn" href="javascript:workContentSwitcher('atlanta')" class="btn btn-default" role="button">Atlanta</a>
+						<a id="miamibtn" href="javascript:workContentSwitcher('miami')" class="btn btn-default" role="button">Miami</a>
+						<a id="londonbtn" href="javascript:workContentSwitcher('london')" class="btn btn-default" role="button">London</a>
+						<a id="detroitbtn" href="javascript:workContentSwitcher('detroit')" class="btn btn-default" role="button">Detroit</a>
+					</div>
+					<div id="workContent">
+						<div id="overviewDiv">
+							<span class="bodyText">
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul Caron has experience in all facets of the news industry. Beginning as a broadcaster
+									and progressing to assignment manager, field producer, correspondent, control room producer, writer, editor, control
+									room manager, political desk manager, director of coverage, national desk manager, and now managing editor. He even
+									ran a camera for a while! He is active in social media, and works well melding 24 hour news cycle into digital coverage.
+									Knowing all the cogs in the machine and what keeps them moving gives Paul the unique ability to see the big picture.</p>
+							</span>
+						</div>
+						<div id="atlantaDiv" class="inactiveDiv">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+									<span class="bodyText">
+										<h1>Atlanta</h1>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul was first brought to CNN headquarters in 1997 as the Weekend News Manager for the
+											National Desk and as a Assignment Editor. He managed and planned national weekend news coverage for CNN and CNN
+											entities and oversaw affiliate weekend coverage. During this time, he received a special Emmy for CNN’s coverage
+											of the 9/11 attacks.</p>
 
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul was made National Content Manager for CNN in 2012.  He supervised and managed the editors
-  											for all 4 regions of the National Desk until his departure in 2014.  In this capacity, he also led breaking news
-  											coverage, which included providing guidance for all platforms (television, CNN.com, and social media) and assigned
-  											reporting teams, including satellite trucks and other live technology.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;In 2004, he was promoted to Regional Assignment Desk Manager for the Northeast and Southeast
+											Regions while continuing in his role as Assignment Editor for the CNN National Desk. In 2012, Paul was asked to
+											take over as the CNN Political Desk Manager and he led his team to win Emmys for coverage of the Democratic Convention
+											in Denver and for coverage of Election Night.</p>
 
-  									  <h2>Other Highlights of Paul’s time at CNN in Atlanta include:</h2>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul was made National Content Manager for CNN in 2012. He supervised and managed the editors
+											for all 4 regions of the National Desk until his departure in 2014. In this capacity, he also led breaking news
+											coverage, which included providing guidance for all platforms (television, CNN.com, and social media) and assigned
+											reporting teams, including satellite trucks and other live technology.</p>
 
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul oversaw breaking news coverage of the crash of the Space Shuttle Columbia, managed the
-  										National Desk coverage of Hurricane Katrina in several Southeast states including New Orleans, and managed the breaking
-  											news of the Boston Marathon bombing and the investigation that followed.</p>
+										<h2>Other Highlights of Paul’s time at CNN in Atlanta include:</h2>
 
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul also managed the breaking news of a US Airways passenger jet making an emergency
-  											landing in the Hudson River with all 155 on board surviving.  It was later dubbed "The Miracle on the Hudson".</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul oversaw breaking news coverage of the crash of the Space Shuttle Columbia, managed
+											the National Desk coverage of Hurricane Katrina in several Southeast states including New Orleans, and managed
+											the breaking news of the Boston Marathon bombing and the investigation that followed.</p>
 
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;In his time as manager at CNN, Paul earned the respect of his coworkers, becoming a leader
-  										and a mentor to many.</p>
-  					    			</p>
-  								  </span>
-  							  </div>
-    							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-    								<img alt="Paul Caron in the Newsroom" class="img-responsive bodyImage" src="./images/atlanta.jpg"  ><span class="small">Paul Caron in the Newsroom</span>
-    							</div>
-  						  </div>
-  		    		</div>
-  		    		<div id="miamiDiv" class="inactiveDiv">
-  		    			<div class="row">
-  			    			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-  					    		<span class="bodyText">
-  					    			<h1>Miami</h1>
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;In 1993, CNN took Paul and his family to Miami, Florida where Paul was CNN Miami Bureau Assignment Manager.
-                        He also continued in his role as producer and correspondent.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul also managed the breaking news of a US Airways passenger jet making an emergency landing
+											in the Hudson River with all 155 on board surviving. It was later dubbed "The Miracle on the Hudson".</p>
 
-  									  <h2>Highlights of Paul’s time in Miami include:</h2>
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul arrived on the one year anniversary of Hurricane Andrew, which was a sign of things to come. He was a
-                        hurricane correspondent and producer for many hurricanes and tropical storms, including Hurricanes Gordon, Erin, and Opal. South
-                        Florida was a great news environment, but not alone in stories of high interest. A day before Hurricane Opal hit the Florida Panhandle,
-                        there was a verdict in the O.J. Simpson murder trial.  He and his colleagues weren't sure the hurricane coverage would make it on the
-                        air, over the trial!</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;In his time as manager at CNN, Paul earned the respect of his coworkers, becoming a leader
+											and a mentor to many.</p>
+										</p>
+									</span>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img alt="Paul Caron in the Newsroom" class="img-responsive bodyImage" src="./images/atlanta.jpg">
+									<span class="small">Paul Caron in the Newsroom</span>
+								</div>
+							</div>
+						</div>
+						<div id="miamiDiv" class="inactiveDiv">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+									<span class="bodyText">
+										<h1>Miami</h1>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;In 1993, CNN took Paul and his family to Miami, Florida where Paul was CNN Miami Bureau
+											Assignment Manager. He also continued in his role as producer and correspondent.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Another front row seat to history was his coverage of the space shuttle program.  Paul covered dozens of space
-                        shuttle launches and landings at the Kennedy Space Center.  Paul said there is nothing more amazing to feel the ground beneath you
-                        rumble exactly 7 seconds after liftoff, 2.5 miles from the launch pad.</p>
+										<h2>Highlights of Paul’s time in Miami include:</h2>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul arrived on the one year anniversary of Hurricane Andrew, which was a sign of things
+											to come. He was a hurricane correspondent and producer for many hurricanes and tropical storms, including Hurricanes
+											Gordon, Erin, and Opal. South Florida was a great news environment, but not alone in stories of high interest.
+											A day before Hurricane Opal hit the Florida Panhandle, there was a verdict in the O.J. Simpson murder trial. He
+											and his colleagues weren't sure the hurricane coverage would make it on the air, over the trial!</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul covered the murder of Gianni Versace by Andrew Cunanan outside of the Versace villa in Miami Beach. He
-                        also covered crash of Valujet flight 592 in the Florida Everglades, for weeks in the June heat of South Florida. Paul was the live
-                        reporter on the story when  the prison escape of and subsequent manhunt for five murderers in Belle Glade, Florida.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Another front row seat to history was his coverage of the space shuttle program. Paul covered
+											dozens of space shuttle launches and landings at the Kennedy Space Center. Paul said there is nothing more amazing
+											to feel the ground beneath you rumble exactly 7 seconds after liftoff, 2.5 miles from the launch pad.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Being in Florida was the first area of impact for the baseball strike in 1995. Spring training towns took an
-                        economic hit. Tiger manager Sparky Anderson took a leave of absence, refusing to coach 'replacement' players.</p>
-  								  </span>
-  							  </div>
-    							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-    								<!--<img alt="test" class="img-responsive bodyImage" src="./images/bio.jpg"  ><span class="small">Paul Caron and his wife, Colleen</span> -->
-    							</div>
-  						  </div>
-  		    		</div>
-  		    		<div id="londonDiv" class="inactiveDiv">
-  		    			<div class="row">
-  			    			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-  					    		<span class="bodyText">
-  					    			<h1>London</h1>
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;In 1990, Paul earned the opportunity to move to London, England to become a master control room producer,
-                        site manager, and reporter for CNN. As a producer, he booked and managed feeds from Europe, Africa, and Asia. In the producer capacity,
-                        he also wrote, voiced, and edited packages for the CNN networks.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul covered the murder of Gianni Versace by Andrew Cunanan outside of the Versace villa
+											in Miami Beach. He also covered crash of Valujet flight 592 in the Florida Everglades, for weeks in the June heat
+											of South Florida. Paul was the live reporter on the story when the prison escape of and subsequent manhunt for
+											five murderers in Belle Glade, Florida.</p>
 
-  										<h2>Highlights of Paul’s time in London include:</h2>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Being in Florida was the first area of impact for the baseball strike in 1995. Spring training
+											towns took an economic hit. Tiger manager Sparky Anderson took a leave of absence, refusing to coach 'replacement'
+											players.
+										</p>
+									</span>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<!--<img alt="test" class="img-responsive bodyImage" src="./images/bio.jpg"  ><span class="small">Paul Caron and his wife, Colleen</span> -->
+								</div>
+							</div>
+						</div>
+						<div id="londonDiv" class="inactiveDiv">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+									<span class="bodyText">
+										<h1>London</h1>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;In 1990, Paul earned the opportunity to move to London, England to become a master control
+											room producer, site manager, and reporter for CNN. As a producer, he booked and managed feeds from Europe, Africa,
+											and Asia. In the producer capacity, he also wrote, voiced, and edited packages for the CNN networks.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;In his first month after arriving to London, Iraq invaded Kuwait, which set the news stage for this
-                        part of his career.  As the U.S. would eventually invade Baghdad and other parts of Iraq, he was a part of that story in many ways.
-                        First, CNN moved most of its overseas correspondents to the war region, which opened up reporting opportunities in London. The home
-                        office and residence for the Prime Minister, 10 Downing Street, was also attacked at the time. As all that was going on, the Irish
-                        Republican Army was bombing parts of London, in its own long war. Paul covered the news on all of that from London, including a
-                        convention focused on anti-terrorism--and a bomb was found under the speaker's podium.  It became very routine.</p>
+										<h2>Highlights of Paul’s time in London include:</h2>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;He was the first to report on the resignation of Prime Minister Margaret Thatcher and the subsequent election
-                        of Prime Minister John Major. After she left office, Thatcher met with President and Mrs. Reagan. Paul was a part of a small radio pool
-                        allowed to shoot a "30 second photo op." He asked a question to the "Iron Lady."  "No, no, no," was her reply, the best no comment of his
-                        career. He also reported on land mines in the war in Bosnia, and the worldwide effort to end their use as a tool of war.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;In his first month after arriving to London, Iraq invaded Kuwait, which set the news stage
+											for this part of his career. As the U.S. would eventually invade Baghdad and other parts of Iraq, he was a part
+											of that story in many ways. First, CNN moved most of its overseas correspondents to the war region, which opened
+											up reporting opportunities in London. The home office and residence for the Prime Minister, 10 Downing Street,
+											was also attacked at the time. As all that was going on, the Irish Republican Army was bombing parts of London,
+											in its own long war. Paul covered the news on all of that from London, including a convention focused on anti-terrorism--and
+											a bomb was found under the speaker's podium. It became very routine.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul was the site producer in Istanbul, Turkey during President George H. Bush’s visit, which celebrated the end
-                        of that US war with Iraq.  In his last year in London, the IRA pulled off another massive bombing in the city, when a truck bomb exploded
-                        in Bishopsgate, killing a news photographer.</p>
-  								  </span>
-  							  </div>
-    							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-    								<!-- <img alt="test" class="img-responsive bodyImage" src="./images/bio.jpg"  ><span class="small">Paul Caron and his wife, Colleen</span> -->
-    							</div>
-  						  </div>
-  		    		</div>
-  		    		<div id="detroitDiv" class="inactiveDiv">
-  		    			<div class="row">
-  			    			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-  					    		<span class="bodyText">
-  									  <h1>Detroit</h1>
-  										<p>&nbsp;&nbsp;&nbsp;&nbsp;After graduating with a double major in Journalism and Broadcasting from Central Michigan University,
-                        Paul worked for WJR as morning-drive news producer and street reporter, by day. At night, he was at.WBRB as Sports Director,
-                        host of a daily sports talk show, and play by play announcer for the high school football and basketball 'game of the week.'
-                        Then, in 1986, he was hired to work under Robert Vito as the Assignment Manager, producer, and correspondent for the Detroit
-                        Bureau of CNN.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;He was the first to report on the resignation of Prime Minister Margaret Thatcher and the
+											subsequent election of Prime Minister John Major. After she left office, Thatcher met with President and Mrs.
+											Reagan. Paul was a part of a small radio pool allowed to shoot a "30 second photo op." He asked a question to
+											the "Iron Lady." "No, no, no," was her reply, the best no comment of his career. He also reported on land mines
+											in the war in Bosnia, and the worldwide effort to end their use as a tool of war.</p>
 
-  									  <h2>Highlights of Paul’s time in Detroit include:</h2>
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Working out of the CNN Detroit Bureau, Paul covered major news events, as well as the issues of the
-                        auto industry and Detroit. He was on the scene hours after the tragic crash of Northwest Airlines Flight #255, in the middle of
-                        I-94.  He was personally impacted while covering the recovery of the sole survivor, Cecelia Cichan, at the University of
-                        Michigan Children’s Burn Center in the weeks that followed.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul was the site producer in Istanbul, Turkey during President George H. Bush’s visit,
+											which celebrated the end of that US war with Iraq. In his last year in London, the IRA pulled off another massive
+											bombing in the city, when a truck bomb exploded in Bishopsgate, killing a news photographer.</p>
+									</span>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<!-- <img alt="test" class="img-responsive bodyImage" src="./images/bio.jpg"  ><span class="small">Paul Caron and his wife, Colleen</span> -->
+								</div>
+							</div>
+						</div>
+						<div id="detroitDiv" class="inactiveDiv">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+									<span class="bodyText">
+										<h1>Detroit</h1>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;After graduating with a double major in Journalism and Broadcasting from Central Michigan
+											University, Paul worked for WJR as morning-drive news producer and street reporter, by day. At night, he was at.WBRB
+											as Sports Director, host of a daily sports talk show, and play by play announcer for the high school football
+											and basketball 'game of the week.' Then, in 1986, he was hired to work under Robert Vito as the Assignment Manager,
+											producer, and correspondent for the Detroit Bureau of CNN.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;During that aftermath of the crash, Paul’s CNN crew shot the only video of the insurance scammer
-                        "Father John Irish," which lead to his arrest.</p>
+										<h2>Highlights of Paul’s time in Detroit include:</h2>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Working out of the CNN Detroit Bureau, Paul covered major news events, as well as the issues
+											of the auto industry and Detroit. He was on the scene hours after the tragic crash of Northwest Airlines Flight
+											#255, in the middle of I-94. He was personally impacted while covering the recovery of the sole survivor, Cecelia
+											Cichan, at the University of Michigan Children’s Burn Center in the weeks that followed.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;In another plane disaster, he covered the Sioux City, IA United Airlines Flight #232 crash, which was
-                        the 2nd worst aviation accident at the time. Amazingly, 125 people survived, some still strapped to their seats as the plane
-                        tumbled into the corn field near the airport. Speaking with a survivor was another moment that influenced him greatly.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;During that aftermath of the crash, Paul’s CNN crew shot the only video of the insurance
+											scammer "Father John Irish," which lead to his arrest.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Another such moment came while covering the funeral of Army Sgt. Kenneth Ford, who died in a terrorist
-                        attack on a Berlin disco, a week before he was to fly back home.  250 people packed tightly into the small Flowery Mount Baptist
-                        church for his funeral, in one of the most emotional and intense events I ever covered.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;In another plane disaster, he covered the Sioux City, IA United Airlines Flight #232 crash,
+											which was the 2nd worst aviation accident at the time. Amazingly, 125 people survived, some still strapped to
+											their seats as the plane tumbled into the corn field near the airport. Speaking with a survivor was another moment
+											that influenced him greatly.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;He covered his first National Republican Party Convention, in New Orleans, where Dan Quayle was named
-                        to run as VP running mate for President George Bush.</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Another such moment came while covering the funeral of Army Sgt. Kenneth Ford, who died
+											in a terrorist attack on a Berlin disco, a week before he was to fly back home. 250 people packed tightly into
+											the small Flowery Mount Baptist church for his funeral, in one of the most emotional and intense events I ever
+											covered.
+										</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Paul had the great opportunity to cover all the Detroit and college area sports teams, up close, for
-                        CNN Sports and the radio stations.  He was there when the "Bad Boys", aka Pistons won 2 NBA titles, 2 years in a row.  He and
-                        his crew watched most of those games from the game floor, underneath a basket--the best 'seat' in the arena.  He also was
-                        track-side for the Detroit Grand Prix, and even covered the phenomena "Wrestlemania."</p>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;He covered his first National Republican Party Convention, in New Orleans, where Dan Quayle
+											was named to run as VP running mate for President George Bush.</p>
 
-                      <p>&nbsp;&nbsp;&nbsp;&nbsp;He profiled former baseball great turned radio host Denny McLain and covered the retirement of Michigan
-                        football coach Bo Schembechler.</p>
-  								  </span>
-  							  </div>
-  							  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-  								  <img alt="Paul Caron and his first mentor, Robert Vito" class="img-responsive bodyImage" src="./images/detroit.jpg"  ><span class="small">Paul Caron and his first mentor, Robert Vito</span>
-  							  </div>
-  						  </div>
-  		    		</div>
-  	    		</div>
-  			  </div>
-  	    	<div id="resumeDiv" class="inactiveDiv">
-  	    	<a href="http://docs.google.com/viewer?url=http%3A%2F%2Fpaulcaronnews.com%2Fassets%2FpCaronResume.pdf" target="_blank" style="float:right" ><span class="glyphicon glyphicon-print "> Print or Download</a>
-  	    		<iframe
-  	    			src="http://docs.google.com/viewer?url=http%3A%2F%2Fpaulcaronnews.com%2Fassets%2FpCaronResume.pdf&embedded=true"
-  	    			width="100%"
-  	    			height="780"
-  	    			style="border: none;">
-  	    		</iframe>
-  	    	</div>
-  			  <div id="galleryDiv" class="inactiveDiv">
-  			    		<div class="btns btn-group btn-group-justified" role="group" aria-label="Justified button group">
-  					      <a id="videobtn" href="javascript:galleryContentSwitcher('video')" class="btn btn-default active" role="button">Video</a>
-  					      <a id="photosbtn" href="javascript:galleryContentSwitcher('photos')" class="btn btn-default" role="button">Photos</a>
-  	    				</div>
-  			    <div id="videoDiv">
-  		    		<div class="row">
-  			    		<div class="col-lg-8">
-  							  <iframe width="100%" height="50%" src="//www.youtube.com/embed/jaqufX8AkcE" frameborder="0" allowfullscreen></iframe>
-  						  </div>
-  			    		<div class="col-lg-4">Haiti Economy</div>
-  		    		</div>
-  		    		<div class="row pushdown">
-  			    		<div class="col-lg-8">
-  							  <iframe width="100%" height="50%" src="//www.youtube.com/embed/fg4sq6cKCnw" frameborder="0" allowfullscreen></iframe>
-  						  </div>
-  			    		<div class="col-lg-4">TWA 800 Crash/sub anchoring on site</div>
-  		    		</div>
-  		    		<div class="row pushdown">
-  			    		<div class="col-lg-8">
-  							  <iframe width="100%" height="50%" src="//www.youtube.com/embed/D0Y7h8tB_N4" frameborder="0" allowfullscreen></iframe>
-  						  </div>
-  			    		<div class="col-lg-4">Live report- downtown London bombing from scene</div>
-  		    		</div>
-  	    			<div class="row pushdown">
-  						  <div class="col-lg-8">
-  			    			<iframe src="//player.vimeo.com/video/21261953" width="100%" height="50%" frameborder="0" allowfullscreen></iframe>
-  			    		</div>
-  			    		<div class="col-lg-4">A video tribute compiled by Paul's coworkers to commemorate his 25th year at CNN</div>
-  		    		</div>
-  			    </div>
-  		    	<div id="photosDiv" class="inactiveDiv ">
-  						<div class="galleria"></div>
-  					</div>
-  			  </div>
-  	    	<div id="linksDiv" class="inactiveDiv">
-      			<div class="row col-lg-offset-1">
-      				<span class="bodyText">
-  							<h1>Links to CNN.com stories</h1>
-  							<br>
-  							<br>
-  							<a href="http://ac360.blogs.cnn.com/2009/03/18/my-city-is-almost-gone/" target="_blank"><h3>- My city is almost gone</h3></a>
-  							<br>
-  							<a href="http://schoolsofthought.blogs.cnn.com/tag/paul-caron-cnn/" target="_blank"><h3>- Six months after Sandy Hook shootings, schools seek secure redesigns</h3></a>
-  							<br>
-  							<a href="http://news.blogs.cnn.com/tag/cnns-paul-caron/" target="_blank"><h3>- Sources: Woman killed in Philly building collapse</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2009/US/08/24/pete.rose/index.html?iref=24hours" target="_blank"><h3>- Rose no closer to baseball reinstatement 20 years into ban</h3></a>
-  							<br>
-  							<a href="http://eatocracy.cnn.com/tag/paul-caron-cnn/" target="_blank"><h3>- Relish the taste of Detroit-style hot dogs at Motor City Coney Island</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2009/US/06/12/btsc.caron.detroit/index.html?_s=PM:US" target="_blank"><h3>- Behind the Scenes: Detroit could use a Cup of cheer</h3></a>
-  							<br>
-  							<a href="http://kfor.com/2013/03/11/ex-detroit-mayor-convicted-in-corruption-case/" target="_blank"><h3>- Ex-Detroit mayor convicted in corruption case</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2014/04/07/health/mlb-weight-loss-denny-mclain/" target="_blank"><h3>- Former MLB pitcher drops 162 pounds</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2013/11/14/us/obit-robert-vito/index.html?iref=allsearch" target="_blank"><h3>- Longtime CNN correspondent Robert Vito dies of cancer</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2013/09/20/sport/yankees-pettitte-retiring/index.html?iref=allsearch" target="_blank"><h3>- Yankees' Andy Pettitte hanging up pinstripes</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2013/03/11/justice/michigan-kilpatrick-verdict/index.html?iref=allsearch" target="_blank"><h3>- Ex-Detroit Mayor Kilpatrick convicted in corruption case</h3></a>
-  							<br>
-  							<a href="http://www.cnn.com/2012/08/25/health/little-league-curveballs/index.html?iref=allsearch" target="_blank"><h3>- Should curveballs be banned in Little League Baseball?</h3></a>
-  							<br>
-  							<a href="http://ac360.blogs.cnn.com/2009/09/01/it%E2%80%99s-time-for-little-league-baseball-to-ban-the-curveball/" target="_blank"><h3>- It’s time for Little League Baseball to ban the curveball</h3></a>
-  					  </span>
-  				  </div>
-  	    	</div>
-  	    	<div id="contactDiv" class="inactiveDiv">
-  	    		<div class="row col-lg-offset-2 pushdown">
-  	    			<span class="bodyText">
-  			    		<p>Contact Paul via email at <a href="mailto:PaulCaron247@gmail.com" target="_top"><img src="./images/emails.jpg" width="23px">&nbsp;PaulCaron247@gmail.com</a></p>
-  						  <p>Follow Paul on Twitter at <a href="https://twitter.com/PCBS46" target="_blank"><img src="./images/tweet.jpeg" width="23px">&nbsp;https://twitter.com/PCBS46</a></p>
-                <p>Read more from Paul on Tumblr <a href="https://paulcaronnews.tumblr.com" target="blank"><img src="./images/tumblr.png" width="23">&nbsp;https://paulcaronnews.tumblr.com</a></p>
-  						  <p>Connect with Paul on LinkedIn at  <a href="https://www.linkedin.com/in/paulcaronnews" target="_blank"><img src="./images/in.jpg" width="23px">&nbsp;https://www.linkedin.com/in/paulcaronnews</a></p>
-  					  </span>
-  	    		</div>
-  	    	</div>
-  			</div>
-  		</div>
-  	 	<div class="col-xs-0 col-sm-0 col-md-1 col-lg-1" id="rightBar">
-  	 	</div>
-  	</div>
-  </body>
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;Paul had the great opportunity to cover all the Detroit and college area sports teams,
+											up close, for CNN Sports and the radio stations. He was there when the "Bad Boys", aka Pistons won 2 NBA titles,
+											2 years in a row. He and his crew watched most of those games from the game floor, underneath a basket--the best
+											'seat' in the arena. He also was track-side for the Detroit Grand Prix, and even covered the phenomena "Wrestlemania."</p>
+
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;He profiled former baseball great turned radio host Denny McLain and covered the retirement
+											of Michigan football coach Bo Schembechler.</p>
+									</span>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+									<img alt="Paul Caron and his first mentor, Robert Vito" class="img-responsive bodyImage" src="./images/detroit.jpg">
+									<span class="small">Paul Caron and his first mentor, Robert Vito</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="resumeDiv" class="inactiveDiv">
+					<a href="http://docs.google.com/viewer?url=http%3A%2F%2Fpaulcaronnews.com%2Fassets%2FpCaronResume.pdf" target="_blank" style="float:right">
+						<span class="glyphicon glyphicon-print "> Print or Download</a>
+					<iframe src="http://docs.google.com/viewer?url=http%3A%2F%2Fpaulcaronnews.com%2Fassets%2FpCaronResume.pdf&embedded=true"
+					 width="100%" height="780" style="border: none;">
+					</iframe>
+				</div>
+				<div id="galleryDiv" class="inactiveDiv">
+					<div class="btns btn-group btn-group-justified" role="group" aria-label="Justified button group">
+						<a id="videobtn" href="javascript:galleryContentSwitcher('video')" class="btn btn-default active" role="button">Video</a>
+						<a id="photosbtn" href="javascript:galleryContentSwitcher('photos')" class="btn btn-default" role="button">Photos</a>
+					</div>
+					<div id="videoDiv">
+						<div class="row">
+							<div class="col-lg-8">
+								<iframe width="100%" height="50%" src="//www.youtube.com/embed/jaqufX8AkcE" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div class="col-lg-4">Haiti Economy</div>
+						</div>
+						<div class="row pushdown">
+							<div class="col-lg-8">
+								<iframe width="100%" height="50%" src="//www.youtube.com/embed/fg4sq6cKCnw" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div class="col-lg-4">TWA 800 Crash/sub anchoring on site</div>
+						</div>
+						<div class="row pushdown">
+							<div class="col-lg-8">
+								<iframe width="100%" height="50%" src="//www.youtube.com/embed/D0Y7h8tB_N4" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div class="col-lg-4">Live report- downtown London bombing from scene</div>
+						</div>
+						<div class="row pushdown">
+							<div class="col-lg-8">
+								<iframe src="//player.vimeo.com/video/21261953" width="100%" height="50%" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div class="col-lg-4">A video tribute compiled by Paul's coworkers to commemorate his 25th year at CNN</div>
+						</div>
+					</div>
+					<div id="photosDiv" class="inactiveDiv ">
+						<div class="galleria"></div>
+					</div>
+				</div>
+				<div id="linksDiv" class="inactiveDiv">
+					<div class="row col-lg-offset-1">
+						<span class="bodyText">
+							<h1>Links to CNN.com stories</h1>
+							<br>
+							<br>
+							<a href="http://ac360.blogs.cnn.com/2009/03/18/my-city-is-almost-gone/" target="_blank">
+								<h3>- My city is almost gone</h3>
+							</a>
+							<br>
+							<a href="http://schoolsofthought.blogs.cnn.com/tag/paul-caron-cnn/" target="_blank">
+								<h3>- Six months after Sandy Hook shootings, schools seek secure redesigns</h3>
+							</a>
+							<br>
+							<a href="http://news.blogs.cnn.com/tag/cnns-paul-caron/" target="_blank">
+								<h3>- Sources: Woman killed in Philly building collapse</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2009/US/08/24/pete.rose/index.html?iref=24hours" target="_blank">
+								<h3>- Rose no closer to baseball reinstatement 20 years into ban</h3>
+							</a>
+							<br>
+							<a href="http://eatocracy.cnn.com/tag/paul-caron-cnn/" target="_blank">
+								<h3>- Relish the taste of Detroit-style hot dogs at Motor City Coney Island</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2009/US/06/12/btsc.caron.detroit/index.html?_s=PM:US" target="_blank">
+								<h3>- Behind the Scenes: Detroit could use a Cup of cheer</h3>
+							</a>
+							<br>
+							<a href="http://kfor.com/2013/03/11/ex-detroit-mayor-convicted-in-corruption-case/" target="_blank">
+								<h3>- Ex-Detroit mayor convicted in corruption case</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2014/04/07/health/mlb-weight-loss-denny-mclain/" target="_blank">
+								<h3>- Former MLB pitcher drops 162 pounds</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2013/11/14/us/obit-robert-vito/index.html?iref=allsearch" target="_blank">
+								<h3>- Longtime CNN correspondent Robert Vito dies of cancer</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2013/09/20/sport/yankees-pettitte-retiring/index.html?iref=allsearch" target="_blank">
+								<h3>- Yankees' Andy Pettitte hanging up pinstripes</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2013/03/11/justice/michigan-kilpatrick-verdict/index.html?iref=allsearch" target="_blank">
+								<h3>- Ex-Detroit Mayor Kilpatrick convicted in corruption case</h3>
+							</a>
+							<br>
+							<a href="http://www.cnn.com/2012/08/25/health/little-league-curveballs/index.html?iref=allsearch" target="_blank">
+								<h3>- Should curveballs be banned in Little League Baseball?</h3>
+							</a>
+							<br>
+							<a href="http://ac360.blogs.cnn.com/2009/09/01/it%E2%80%99s-time-for-little-league-baseball-to-ban-the-curveball/" target="_blank">
+								<h3>- It’s time for Little League Baseball to ban the curveball</h3>
+							</a>
+						</span>
+					</div>
+				</div>
+				<div id="contactDiv" class="inactiveDiv">
+					<div class="row col-lg-offset-2 pushdown">
+						<span class="bodyText">
+							<p>Contact Paul via email at
+								<a href="mailto:PaulCaron247@gmail.com" target="_top">
+									<img src="./images/emails.jpg" width="23px">&nbsp;PaulCaron247@gmail.com</a>
+							</p>
+							<p>Follow Paul on Twitter at
+								<a href="https://twitter.com/PCBS46" target="_blank">
+									<img src="./images/tweet.jpeg" width="23px">&nbsp;https://twitter.com/PCBS46</a>
+							</p>
+							<p>Read more from Paul on Tumblr
+								<a href="https://paulcaronnews.tumblr.com" target="blank">
+									<img src="./images/tumblr.png" width="23">&nbsp;https://paulcaronnews.tumblr.com</a>
+							</p>
+							<p>Connect with Paul on LinkedIn at
+								<a href="https://www.linkedin.com/in/paulcaronnews" target="_blank">
+									<img src="./images/in.jpg" width="23px">&nbsp;https://www.linkedin.com/in/paulcaronnews</a>
+							</p>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-0 col-sm-0 col-md-1 col-lg-1" id="rightBar">
+		</div>
+	</div>
+</body>
+
 </html>
